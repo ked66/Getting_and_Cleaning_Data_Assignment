@@ -45,6 +45,7 @@ subsetData$activity <- as.factor(subsetData$activity)
 
 ## Calculate the means
 library(reshape2)
-
 meltData <- melt(subsetData, id = c("subjects", "activity"))
 tidy2 <- dcast(meltData, subjects + activity ~ variable, mean)
+## Write final tidy dataset to file
+write.table(tidy2, file = "./data/tidy2.txt", row.names = FALSE)
