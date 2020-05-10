@@ -17,4 +17,9 @@ Then, files containing subject IDs and activity IDs were unzipped and importante
 
 Finally, the resulting dataset was used to create a second tidy data set, displaying the mean value for each measurement by subject and activity ID. This second dataset also abides by the principles of tidy data, as described in Hadly Wickham's paper "Tidy Data" (thus satisfying STEP 5).
 
-A full description of this second tidy data set (saved in this repo as "tidydata2.txt") can be found in the Codebook.
+A full description of this second tidy data set (saved in this repo as "tidy2.txt") can be found in the Codebook.
+
+TO READ TIDY2.txt INTO R:
+URL <- "https://raw.githubusercontent.com/ked66/Getting_and_Cleaning_Data_Assignment/master/tidy2.txt"
+library(RCurl)
+x <- read.table(text = getURL(URL), header = TRUE)
