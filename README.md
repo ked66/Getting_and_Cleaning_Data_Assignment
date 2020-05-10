@@ -20,6 +20,6 @@ Finally, the resulting dataset was used to create a second tidy data set, displa
 A full description of this second tidy data set (saved in this repo as "tidy2.txt") can be found in the Codebook.
 
 TO READ TIDY2.txt INTO R:\
-URL <- "https://raw.githubusercontent.com/ked66/Getting_and_Cleaning_Data_Assignment/master/tidy2.txt"\
+URL <- "https://raw.githubusercontent.com/ked66/Getting_and_Cleaning_Data_Assignment/master/tidy2.txt" \
 library(RCurl)\
 x <- read.table(text = getURL(URL), header = TRUE)\
